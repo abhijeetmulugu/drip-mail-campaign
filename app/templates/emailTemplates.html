@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h1>Templates</h1><br><br>
+<form method="POST" action="/addTemplates">
+
+    {% for i in range(1,stages+1) %}
+
+    Stage-{{i}}:<input type="text" name="stage-{{i}}"><br><br>
+
+
+    {% endfor %}
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

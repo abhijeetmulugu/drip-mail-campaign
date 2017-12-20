@@ -1,9 +1,9 @@
-#Drip-mail-campaign
+# Drip-mail-campaign
 
 Setup a drip campaign which sends mail to your customers over time.
 
  
-##Prerequisites
+## Prerequisites
 
 Python 3
 
@@ -17,7 +17,7 @@ Scheduler
 
 httplib2
 
-##Setup
+## Setup
 
 -Install the required libraries
 
@@ -47,7 +47,7 @@ templates
 
 -Run python3 campaignManager.py and python3 scheduler.py in separate consoles
 
-##Setting up the Campaign
+## Setting up the Campaign
 
 -Go to localhost:5000/. The app will redirect to google login page. Log in and provide the prompted permissions. You will redirected back to the campaign home page
 
@@ -55,7 +55,7 @@ templates
 
 -In the next page you will be prompted to enter the  user names and emails. While entering the email templates use {name} as a placeholder for name value.
 
-##Working
+## Working
 
 -The first time a user logs in, the credentials object of that user which contains the refresh token will be stored in the users table and will be used to 
 call gmail api to send mails
@@ -66,23 +66,23 @@ input at the time of setting up the campaign. All the emails all scheduled to be
 -Replies will be detected from each customer with some keywords and in case of match(when the customer replies to stop the campaign),
 his information will be deleted from the subscribers table and he will not receive the subsequent emails. Replies are scheduled to occur at 11.30pm
 
-##Schemas
+## Schemas
 
 There are 4 tables being used for this project
 
-###users
+### users
 
 userId, email and his credentials as provided by the oauth api are stored in this table.
 
-###campaign
+### campaign
 
 campaign information is stored here like the campaign name, no. of users and no. of subscribers
 
-###templates
+### templates
 
 The email templates according to the corresponding campaign and their respective scheduled times are stored here
 
-###subscribers
+### subscribers
 
 The subscribers names and their mails are stored in this table
 

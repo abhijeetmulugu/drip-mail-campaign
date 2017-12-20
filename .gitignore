@@ -1,2 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
+venv/
+app/__pycache__/
+app/testdatabase.db
+app/sqlLite.db
+drip-mail-campaign-new.iml
+requirements.txt
+app/client_secret.json

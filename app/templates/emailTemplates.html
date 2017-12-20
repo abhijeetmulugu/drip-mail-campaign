@@ -1,8 +1,23 @@
 <html>
 <body>
 
-<h1>Templates</h1><br><br>
+<h1>Add Subcribers</h1><br><br>
 <form method="POST" action="/addTemplates">
+
+    <input type="hidden" name="campaignName"  value="{{campaignName}}">
+    <input type="hidden" name="stages"  value="{{stages}}">
+    <input type="hidden" name="days"  value="{{days}}">
+    <input type="hidden" name="subscribers"  value="{{subscribers}}">
+
+    {% for i in range(1,subscribers+1) %}
+
+    UserName-<input type="text" name="subcriber-{{i}}">
+    Email-<input type="text" name="email-{{i}}"><br><br>
+
+    {% endfor %}
+
+    <h1>Add Email Templates</h1><br><br>
+
 
     {% for i in range(1,stages+1) %}
 
